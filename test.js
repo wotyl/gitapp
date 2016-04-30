@@ -1,0 +1,1 @@
+$('body').on('click', '.if', function(){alert('worke')})
