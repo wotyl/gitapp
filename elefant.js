@@ -1,3 +1,1 @@
-window.onload = function() {
-	alert('worke');
-}
+alert('worke');
