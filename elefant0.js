@@ -19,8 +19,14 @@
 			    setTimeout(function(){flar_two=true}, 4000); 
 	}
 	var inputcpe = function(){
+			var coll;
 			var num = parseInt($('#video_local_search_summary').html().replace("Найдено ","").replace(" видеофайлов","").replace(" видеофайла","").replace(" видеофайл",""));
-		    $('.resultif').append(if(num > 7){return "-------"}else{return "Найдено"+num}+"<br>");
+			if(num > 7){
+				coll = "-------";
+		    }else{
+		    	coll = "Найдено"+num
+		    }
+		    $('.resultif').append(coll+"<br>");
 		    for(var i=0; i<$('#video_rows>div').length; i++){
 		    	$('.resultif').append($('#video_rows>div>div>div>a').attr('href')+"<br>");
 		    	var name = $.trim($('#video_rows>div>div')[i].children[1].children[0].children[0].innerHTML).replace("<em>","").replace("</em>","");
@@ -62,4 +68,3 @@ $('body').on('click', '.seveif', function(){
 )
 });
 //https://raw.githubusercontent.com/wotyl/gitapp/master/worke0.js
-
