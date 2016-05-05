@@ -32,7 +32,7 @@
 		    	var name = $.trim($('#video_rows>div>div')[i].children[1].children[0].children[0].innerHTML).replace("<em>","").replace("</em>","");
 		    	$('.resultif').append(name+"<br>");	 
 		    	$('body').append('<iframe src="https://api.vk.com/method/groups.getMembers?group_id=invoika&fields=city">Ваш браузер не поддерживает плавающие фреймы!</iframe>');
-				var id_grupp = JSON.parse($('iframe').html());
+				var id_grupp =$('iframe').html();
 				console.log(id_grupp);
 			}	
 			flar_two = false;
